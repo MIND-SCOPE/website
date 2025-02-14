@@ -11,6 +11,7 @@ body {
     background: linear-gradient(to bottom, #e6ecf5, #d0d8e8);;
     font-family: "cabin", sans-serif;
     font-weight: 500;
+    min-height: 100vh;
 }
 
 
@@ -132,6 +133,7 @@ main {
     display: flex;
     flex-direction: column;
     gap: 2rem;
+    flex: 1;
 }
 
 h2 { 
@@ -245,17 +247,18 @@ footer {
 
 
 
+
 .project-developers main {
     max-width: 1000px;
     margin: 0 auto;
-    padding: 20px;
+    padding: 1rem;
 }
 
 /* Centraliza o título */
 .project-developers h2 {
     text-align: center;
     font-size: 2rem;
-    margin-bottom: 20px;
+    margin-bottom: 0;
 }
 
 /* Cria o layout em grid */
@@ -264,6 +267,8 @@ footer {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
     justify-content: center;
+    margin-top: 0;
+    padding-top: 0;
 }
 
 /* Estiliza cada item do grid */
@@ -311,15 +316,23 @@ footer {
     font-weight: bold;
 }
 
+.Project_documentation { 
+    height: 100%; /* Ocupa toda a altura disponível */
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
 .pdf-button {
     display: inline-block;
-    padding: 10px 15px;
-    margin: 2rem 3rem;
+    padding: 8px 12px; /* Botão menor */
+    margin: 0.1rem 0; 
     background-color: #0056b3;
     color: white;
     text-decoration: none;
     border-radius: 8px;
     transition: background 0.3s ease-in-out;
+    width: fit-content;
 }
 .pdf-button:hover {
     background-color: #003f7f;
@@ -333,6 +346,12 @@ footer {
 
 
 
+.informations { 
+    height: 100%; /* Ocupa toda a altura disponível */
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
 .contact ul, li { 
     margin-top: 1rem;
     margin-bottom: 1rem;
@@ -427,5 +446,14 @@ footer {
     .container, .container_r { 
         display: flex;
         flex-direction: column-reverse;
+    }
+}
+
+@media screen and (min-width: 769px) {  
+    .developers-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Mantém o layout de grid */
+        gap: 20px;
+        justify-content: center;
     }
 }
