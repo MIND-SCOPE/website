@@ -123,7 +123,7 @@ header {
 
 
 .main {
-    padding: 3rem 5rem;
+    padding: 2rem 5rem;
     max-width: 60rem; 
     margin: 0 auto;
     justify-content: flex-start;
@@ -170,6 +170,7 @@ ul {
 
 .container {
     display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
     gap: 2rem; /* Para evitar que fiquem colados */
@@ -322,7 +323,7 @@ footer {
 /* Cria o layout em grid */
 .developers-grid-p {
     display: grid;
-    grid-template-columns: repeat(3, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 1.5rem;
     justify-content: center;
     margin-top: 0;
@@ -438,11 +439,13 @@ footer {
 .universidades-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr)); /* Ajusta as colunas automaticamente */
-    gap: 1.5rem;
+    gap: 2rem;
     padding: 2rem;
     width: 90%;
     max-width: 1200px;
     margin: auto;
+    align-items: center;
+    margin: 0 auto;
 }
 
 .universidade {
@@ -558,6 +561,8 @@ footer {
     }
 
     .main {
+        display: flex;
+        flex-direction: column;
         padding: 1.5rem;
         max-width: 150%; /* Ajusta a largura para quase toda a tela */
     }
@@ -568,6 +573,17 @@ footer {
     .container, .container_r { 
         display: flex;
         flex-direction: column-reverse;
+    }
+
+    .bottom-line { 
+        display: flex;
+        flex-direction: column;
+    }
+    .universidades-container {
+        grid-template-columns: 1fr; /* Força uma única coluna */
+        width: 100%;
+        padding: 1rem;
+        justify-items: center; /* 🔥 Centraliza os itens dentro do grid */
     }
 }
 
