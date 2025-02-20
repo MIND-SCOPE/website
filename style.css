@@ -11,7 +11,7 @@ body {
     background: linear-gradient(to bottom, #e6ecf5, #d0d8e8);;
     font-family: "cabin", sans-serif;
     font-weight: 500;
-    min-height: 100vh;
+    min-height: 50vh;
 }
 
 
@@ -126,6 +126,7 @@ header {
     padding: 3rem 5rem;
     max-width: 60rem; 
     margin: 0 auto;
+    justify-content: flex-start;
 }
 
 main { 
@@ -248,10 +249,18 @@ footer {
 
 
 
-.project-developers main {
+.upper-line main {
+    max-width: 1300px;
+    margin: 0 auto;
+    margin-bottom: 0;
+    padding: 1rem;
+}
+
+.bottom-line {
     max-width: 1000px;
     margin: 0 auto;
-    padding: 1rem;
+    padding: 0rem;
+    margin-top: -2rem;
 }
 
 /* Centraliza o título */
@@ -269,6 +278,7 @@ footer {
     justify-content: center;
     margin-top: 0;
     padding-top: 0;
+    place-items: center;
 }
 
 /* Estiliza cada item do grid */
@@ -279,6 +289,7 @@ footer {
     border-radius: 0.625rem;
     box-shadow: 0 0.25rem 0.375rem rgba(0, 0, 0, 0.15);
     transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+    margin-bottom: 0;
 }
 
 .developer:hover {
@@ -303,6 +314,55 @@ footer {
 
 /* Estiliza os parágrafos */
 .developer p {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+
+/* Cria o layout em grid */
+.developers-grid-p {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(200px, 1fr));
+    gap: 1.5rem;
+    justify-content: center;
+    margin-top: 0;
+    padding-top: 0;
+    place-items: center;
+}
+
+/* Estiliza cada item do grid */
+.developer-p {
+    text-align: center;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 0.625rem;
+    box-shadow: 0 0.25rem 0.375rem rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+    margin-bottom: 0;
+}
+
+.developer-p:hover {
+    transform: scale(1.05); /* Leve aumento */
+    box-shadow: 0 0.5rem 0.75rem rgba(0, 0, 0, 0.2); /* Sombra um pouco mais forte */
+}
+
+/* Ajusta as imagens */
+.developer-p img {
+    width: 120px; /* Define um tamanho fixo */
+    height: 120px;
+    object-fit: cover; /* Garante que a imagem fique bem ajustada */
+    border-radius: 50%; /* Torna a imagem redonda */
+    border: 3px solid #ccc;
+}
+
+/* Ajusta os títulos dos professores */
+.developer-p h3 {
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+
+/* Estiliza os parágrafos */
+.developer-p p {
     font-size: 0.9rem;
     color: #555;
 }
@@ -515,7 +575,7 @@ footer {
     .developers-grid {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Mantém o layout de grid */
-        gap: 20px;
+        gap: 5px;
         justify-content: center;
     }
 }
